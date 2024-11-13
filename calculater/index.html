@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="html.CSS"> <!-- Linking the CSS file -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="calc">
+        <form name="form">
+            <input type="text" class="calc-display" name="display" readonly> <!-- Added readonly to prevent manual input -->
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" value="C" onclick="clearDisplay()"></td>
+                <td><input type="button" value="/" onclick="insertValue('/')"></td>
+                <td><input type="button" value="*" onclick="deleteLast()"></td>
+                <td><input type="button" value="X" onclick="insertValue('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="insertValue(7)"></td>
+                <td><input type="button" value="8" onclick="insertValue(8)"></td>
+                <td><input type="button" value="9" onclick="insertValue(9)"></td>
+                <td><input type="button" value="-" onclick="insertValue('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="insertValue(4)"></td>
+                <td><input type="button" value="5" onclick="insertValue(5)"></td>
+                <td><input type="button" value="6" onclick="insertValue(6)"></td>
+                <td><input type="button" value="+" onclick="insertValue('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="insertValue(1)"></td>
+                <td><input type="button" value="2" onclick="insertValue(2)"></td>
+                <td><input type="button" value="3" onclick="insertValue(3)"></td>
+                <td rowspan="2"><input type="button" value="=" onclick="calculate()" style="height: 158px; background-color: orange;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0" onclick="insertValue(0)" style="width: 158px;"></td>
+                <td><input type="button" value="." onclick="insertValue('.')"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="html.js"></script> <!-- Linking the JS file -->
+</body>
+</html>
